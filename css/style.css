@@ -215,8 +215,9 @@ main .arrow:before {
   left: 0;
   right: 0;
   margin: 0 auto;
-  background-color: #fff;
-  animation: lineDown 1.5s ease-out infinite;
+  background: #ee4c69;
+  background: linear-gradient(90deg, #ee4c69 0%, #ffebbb 100%);
+  animation: lineDown 1.5s linear 1.5s infinite;
   transform-origin: top center;
 }
 main .arrow img {
