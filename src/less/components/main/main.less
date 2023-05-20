@@ -6,6 +6,45 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    z-index: 1;
+
+    .arrow{
+      position: absolute;
+      display: flex;
+      width: 60px;
+      height: 75px;
+      justify-content: center;
+      bottom: 50px;
+
+      &:before {
+        content: '';
+        width: 2px;
+        height: 45px;
+        display: block;
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background-color: #fff;
+        animation: lineDown 1.5s ease-out infinite;
+        transform-origin: top center;
+     }
+
+      img {
+        width: 16px;
+        height: 10px;
+        display: block;
+        position: absolute;
+        bottom: 25px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        opacity: 1;
+        animation: arrowDown 1.5s linear 1.5s infinite;
+      }
+    }
   
     .main-text{
       h1, h2{
