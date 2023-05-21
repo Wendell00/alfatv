@@ -8,15 +8,138 @@ main{
     align-items: center;
     position: fixed;
     z-index: 1;
-
-    .buttons-main{
-      width: 100vw;
-      display: flex;
-      justify-content: center;
+  
+    .main-text{
+      position: relative;
+      width: 300px;
 
       @media screen and (min-width: 450px) {
         width: auto;
-        margin-left: 26px;
+      }
+
+      h1, h2{
+        font-family: 'Jost', sans-serif;
+        background: rgb(238,76,105);
+        background: linear-gradient(90deg, rgba(238,76,105,1) 0%, rgba(255,235,187,1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      .antena{
+        position: absolute;
+        top: -35px;
+        width: 52px;
+        height: 52px;
+        right: 15px;
+        z-index: 5;
+        transform: scale(0.8);
+
+        @media screen and (min-width: 450px) {
+          top: -40px;
+          width: 64px;
+          height: 64px;
+          right: 30px;
+        }
+
+        @media screen and (min-width: 768px) {
+          top: -52px;
+          width: 80px;
+          height: 80px;
+          right: 0;
+        }
+      }
+
+      h1{
+        font-weight: 600;
+        font-size: 4.8rem;
+        text-align: center;
+        display: flex;
+
+        @media screen and (min-width: 450px) {
+            font-size: 6rem;
+        }
+
+        @media screen and (min-width: 768px) {
+            font-size: 9rem;
+        }
+
+        .span-h1{
+          margin-left: 20px;
+          width: 70px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 8px;
+          height: 48px;
+          border: 4px;
+          border-style: solid;
+          border-image: linear-gradient(90deg, rgba(238,76,105,1), rgb(255, 235, 187)) 1;
+          position: relative;
+          z-index: 6;
+
+          @media screen and (min-width: 450px) {
+            width: 70px;
+            height: 58px;
+            margin-top: 11px;
+            border: 6px;
+            border-style: solid;
+            border-image: linear-gradient(90deg, rgba(238,76,105,1), rgb(255, 235, 187)) 1;
+          }
+
+          @media screen and (min-width: 768px) {
+            margin-top: 12px;
+            height: 94px;
+            width: 120px;
+            border: 8px;
+            border-style: solid;
+            border-image: linear-gradient(90deg, rgba(238,76,105,1), rgb(255, 235, 187)) 1;
+          }
+
+          h1{
+            font-size: 3rem;
+
+            @media screen and (min-width: 768px) {
+              font-size: 5rem;
+            }
+          }
+        }
+      }
+      
+    
+      h2{
+        font-weight: 500;
+        font-size: 1.2rem;
+        text-align: start;
+        width: 80vw;
+        margin: 0 auto;
+
+        @media screen and (min-width: 450px) {
+          width: auto;
+          margin-left: 6px;
+        }
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.5em;
+            margin-left: 0px;
+        }
+
+        @media screen and (min-width: 768px) {
+            font-size: 2.6rem;
+        }
+        
+      }
+    }
+
+    .buttons-main{
+      width: auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      @media screen and (min-width: 450px) {
+        width: auto;
+        flex-direction: row;
       }
 
       @media screen and (min-width: 768px) {
@@ -45,6 +168,13 @@ main{
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 175px;
+        margin-left: 50px;
+
+        @media screen and (min-width: 450px) {
+          width: auto;
+          margin-left: 0px;
+        }
 
         @media screen and (min-width: 768px) {
           font-size: 16px;
@@ -122,61 +252,18 @@ main{
         opacity: 1;
         animation: arrowDown 1.5s linear 1.5s infinite;
       }
-
-      
-    }
-  
-    .main-text{
-      h1, h2{
-        font-family: 'Jost', sans-serif;
-        background: rgb(238,76,105);
-        background: linear-gradient(90deg, rgba(238,76,105,1) 0%, rgba(255,235,187,1) 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-      }
-
-      h1{
-        font-weight: 600;
-        font-size: 4.8rem;
-        text-align: center;
-
-        @media screen and (min-width: 450px) {
-            font-size: 6rem;
-        }
-
-        @media screen and (min-width: 768px) {
-            font-size: 9rem;
-        }
-      }
-    
-      h2{
-        font-weight: 500;
-        font-size: 1.2rem;
-        text-align: start;
-        width: 80vw;
-        margin: 0 auto;
-
-        @media screen and (min-width: 450px) {
-          width: auto;
-          margin-left: 26px;
-        }
-
-        @media screen and (min-width: 768px) {
-            font-size: 1.5em;
-            margin-left: 0px;
-        }
-
-        @media screen and (min-width: 768px) {
-            font-size: 2.6rem;
-        }
-        
-      }
     }
   }
 
   .mr-right{
-    margin-right: 30px;
+    margin-right: 0px;
+    margin-top: 50px;
+
+
+    @media screen and (min-width: 450px) {
+      margin-right: 30px;
+      margin-top: 0;
+    }
 
     @media screen and (min-width: 768px) {
       margin-right: 50px;
