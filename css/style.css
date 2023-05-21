@@ -687,11 +687,6 @@ aside ul li a:hover {
     width: 800px;
   }
 }
-@media screen and (min-width: 768px) {
-  .consertos-container .titulo-container {
-    width: 800px;
-  }
-}
 @media screen and (min-width: 840px) {
   .consertos-container .titulo-container {
     padding-bottom: 15px;
@@ -904,6 +899,83 @@ aside ul li a:hover {
 }
 .margin-bottom {
   margin-bottom: 60px;
+}
+.container-depoimentos {
+  background: #4e1f28;
+  background-image: linear-gradient(90deg, #4e1f28 0%, #623740 100%);
+  height: 700px;
+  position: relative;
+  z-index: 10;
+  width: 100vw;
+}
+.container-depoimentos .title-depoimentos {
+  width: 100%;
+  padding-top: 30px;
+}
+.container-depoimentos .title-depoimentos h2 {
+  text-align: center;
+  color: #fff;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.5em;
+}
+.swiper {
+  width: 630px;
+  height: 500px;
+}
+.swiper .swiper-wrapper {
+  height: 100%;
+  width: 100%;
+}
+.swiper .swiper-wrapper .swiper-slide {
+  height: 100%;
+  width: 100%;
+}
+.swiper .swiper-wrapper .swiper-slide .area-depoimentos {
+  margin: 0 auto;
+  margin-top: 70px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+.swiper .swiper-wrapper .swiper-slide .area-depoimentos .paragraph-depoimentos {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  text-align: justify;
+}
+.swiper .swiper-wrapper .swiper-slide .area-depoimentos .name-depoimentos {
+  margin-top: 40px;
+  font-size: 1.5rem;
+  font-family: 'Signika';
+  font-weight: bolder;
+}
+.swiper .swiper-wrapper .swiper-slide .area-depoimentos .stars-depoimentos img {
+  height: 45px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  background-color: #ccc;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.container-maps {
+  height: auto;
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+}
+.container-maps .map {
+  width: 1140px;
+  padding: 20px 0;
 }
 .whatsapp {
   width: 64px;
