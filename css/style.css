@@ -179,6 +179,20 @@ table {
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/jost/v14/92zPtBhPNqw79Ij1E865zBUv7mx9IgVG.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'Signika';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/signika/v20/vEFO2_JTCgwQ5ejvMV0O96D01E8J0tJlHJbG.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Signika';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/signika/v20/vEFO2_JTCgwQ5ejvMV0O96D01E8J0tKJG5bG.ttf) format('truetype');
+}
 body {
   width: 100vw;
   overflow-x: hidden;
@@ -196,6 +210,78 @@ main {
   align-items: center;
   position: fixed;
   z-index: 1;
+}
+main .buttons-main {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 450px) {
+  main .buttons-main {
+    width: auto;
+    margin-left: 26px;
+  }
+}
+@media screen and (min-width: 768px) {
+  main .buttons-main {
+    margin-left: 0;
+  }
+}
+main .buttons-main .btn-main {
+  padding: 0.8em 1.2em;
+  border-bottom: 2px;
+  border-style: solid;
+  border-image: linear-gradient(90deg, #ee4c69, #ffebbb) 1;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #ffebbb;
+  margin-top: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  main .buttons-main .btn-main {
+    font-size: 16px;
+    padding: 0.8em 1.8em;
+  }
+}
+main .buttons-main .btn-main img {
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+}
+main .buttons-main .btn-main:before {
+  content: '';
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  background: rgba(255, 235, 187, 0.9);
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+main .buttons-main .btn-main:before:hover {
+  background: rgba(238, 76, 105, 0.9);
+}
+main .buttons-main .btn-main:hover:before {
+  width: 105%;
+}
+main .buttons-main .btn-main:hover {
+  color: #ee4c69;
 }
 main .arrow {
   position: absolute;
@@ -260,15 +346,32 @@ main .main-text h2 {
   font-weight: 500;
   font-size: 1.2rem;
   text-align: start;
+  width: 80vw;
+  margin: 0 auto;
+}
+@media screen and (min-width: 450px) {
+  main .main-text h2 {
+    width: auto;
+    margin-left: 26px;
+  }
 }
 @media screen and (min-width: 768px) {
   main .main-text h2 {
     font-size: 1.5em;
+    margin-left: 0px;
   }
 }
 @media screen and (min-width: 768px) {
   main .main-text h2 {
     font-size: 2.6rem;
+  }
+}
+.mr-right {
+  margin-right: 30px;
+}
+@media screen and (min-width: 768px) {
+  .mr-right {
+    margin-right: 50px;
   }
 }
 nav {
@@ -294,6 +397,8 @@ nav img {
   height: 32px;
   margin-left: 40px;
   cursor: pointer;
+  position: relative;
+  z-index: 10;
 }
 @media screen and (min-width: 768px) {
   nav img {
@@ -340,12 +445,141 @@ nav ul li .active-a {
 nav ul li .active-a:hover {
   border-bottom: 5px solid white;
 }
+nav h3 {
+  font-family: 'Jost', sans-serif;
+  color: #FFE8BA;
+  font-size: 1.2rem;
+  position: absolute;
+  right: 80px;
+}
+@media screen and (min-width: 768px) {
+  nav h3 {
+    position: relative;
+    right: 0;
+  }
+}
+aside {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  background-color: #4e1f28;
+  z-index: 8;
+  display: none;
+}
+aside img {
+  width: 32px;
+  height: 32px;
+  margin-left: 40px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+aside ul {
+  padding-top: 100px;
+}
+aside ul li {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  border-bottom: 2px solid #FFE8BA;
+}
+aside ul li a {
+  font-family: 'Jost', sans-serif;
+  color: #FFE8BA;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+aside ul li a:hover {
+  color: white;
+}
+.dis-inline {
+  display: inline !important;
+}
 .concertos-container {
   position: relative;
+  height: auto;
   width: 100vw;
-  height: 100vh;
   background-color: white;
   z-index: 2;
+  box-sizing: border-box;
+  padding-top: 50px;
+}
+.concertos-container .titulo-container {
+  margin: 0 auto;
+  height: 120px;
+  width: 1100px;
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.concertos-container .titulo-container h2 {
+  font-family: 'Signika', sans-serif;
+  font-weight: 600;
+  font-size: 2.5em;
+  color: #6d1928;
+}
+.concertos-container .concertos-content {
+  width: 1140px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.concertos-container .concertos-content .mx-wid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.concertos-container .concertos-content .mx-wid .card {
+  background-color: #fff;
+  height: 480px;
+  width: 400px;
+  margin-top: 60px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  overflow: hidden;
+  justify-self: center;
+  align-self: center;
+  border-radius: 20px;
+}
+.concertos-container .concertos-content .mx-wid .card .img-card {
+  height: 250px;
+  width: 100%;
+  background: url('../public/tvs.jpg') no-repeat center center;
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: transform 0.2s ease-in;
+}
+.concertos-container .concertos-content .mx-wid .card .img-card:hover {
+  transform: scale(1.01);
+}
+.concertos-container .concertos-content .mx-wid .card .title-card {
+  background-color: #fff;
+  font-size: 2em;
+  font-family: 'Signika', sans-serif;
+  font-weight: 500;
+  padding-left: 10px;
+  margin-top: 20px;
+  border-left: 5px solid black;
+  color: #6d1928;
+}
+.concertos-container .concertos-content .mx-wid .card .title-card:hover {
+  color: #ee4c69;
+  border-color: #4e1f28;
+  cursor: pointer;
+  transition: ease-in 0.25s;
+}
+.concertos-container .concertos-content .mx-wid .card .par-card {
+  max-width: 350px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  margin: 0 auto;
+  font-family: 'Signika', sans-serif;
+  font-weight: 500;
+  color: gray;
+  font-size: 1.3rem;
 }
 .whatsapp {
   width: 64px;

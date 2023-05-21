@@ -10,23 +10,43 @@
 </head>
 <body>
     <div class="whatsapp">
-        <a href="#">
+        <a href="https://web.whatsapp.com/send?phone=5511946120040&text=Olá gostaria de agendar um horário para o concerto de minha televisão." target="_blank">
             <img src="./public/whatsapp.png" alt="WhatsApp">
         </a>
     </div>
     <nav>
-        <img src="./public/menuIcon.png" alt="Menu">
+        <img src="./public/menuIcon.png" class="menuIcon" alt="Menu">
         <ul>
             <li class="active-li"><a href="#" class="active-a">Home</a></li>
             <li><a href="#" class="">Concertos</a></li>
             <li><a href="#" class="">Depoimentos</a></li>
             <li><a href="#" class="">Contatos</a></li>
         </ul>
+        <h3>(11) 94612-0040</h3>
     </nav>
+    <aside class="aside-nav">
+        <img src="./public/close.png" class="closeIcon" alt="">
+        <ul>
+            <li class="active-li"><a href="#" class="active-a">Home</a></li>
+            <li><a href="#" class="">Concertos</a></li>
+            <li><a href="#" class="">Depoimentos</a></li>
+            <li><a href="#" class="">Contatos</a></li>
+        </ul>
+    </aside>
     <main>
         <div class="main-text">
             <h1>ALFA TV</h1>
             <h2>CONCERTOS E REPAROS</h2>
+            <div class="buttons-main">
+                <div class="btn-main mr-right"> 
+                    <img src="./public/calendar.png" alt="">
+                    Agendar Horário
+                </div>
+                <div class="btn-main"> 
+                    <img src="./public/phone-call.png" alt="">
+                    Ligar Agora
+                </div>
+            </div>
         </div>
         <div class="arrow">
             <img src="./public/arrow-down.png" alt="" class="arrow-down">
@@ -34,7 +54,63 @@
     </main>
     <div class="height-100vh"></div>
     <section class="concertos-container">
+        <div class="titulo-container">
+            <h2 class="titulo-container2" >Principais Concertos da TV</h2>
+        </div>
+        <div class="concertos-content">
+            <div class="mx-wid">
+                
+                <div class="card">
+                    <div class="img-card">
+                        
+                    </div>
+                    <div class="title-card">
+                        <h3>TV com Tela preta!</h3>
+                    </div>
+                    <div class="par-card">
+                        <p>Tv liga mais e não aparece imagem? Problema no sistema de LED da TV pode impedir que a tela funcione corretamente</p>
+                    </div>
+                </div>
 
+                <div class="card ">
+                    <div class="img-card">
+
+                    </div>
+                    <div class="title-card">
+                        <h3>TV ficou sem som!</h3>
+                    </div>
+                    <div class="par-card">
+                        <p>Minha TV liga aparece a imagem normal, mas não sai som, tem conserto? Sim! Agende um horário na nossa assistência técnica.</p>
+                    </div>
+                </div>
+            
+            
+                <div class="card">
+                    <div class="img-card">
+
+                    </div>
+                    <div class="title-card">
+                        <h3>TV Queimou!</h3>
+                    </div>
+                    <div class="par-card">
+                        <p>Sua TV queimou? Deu um estalo e logo após não liga? Foi causa de algum raio ou queda de energia? Agende horário.</p>
+                    </div>
+                </div>
+
+                <div class="card ">
+                    <div class="img-card">
+
+                    </div>
+                    <div class="title-card">
+                        <h3>TV Com imagem ruim</h3>
+                    </div>
+                    <div class="par-card">
+                        <p>TV com tela imagem ruim, tem conserto? Sim! Realizamos o reparo da tela de sua TV aqui na Assistência Técnica de TV.</p>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
     </section>
     <script src="src/index.js"></script>
 </body>
