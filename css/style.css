@@ -623,7 +623,7 @@ aside img {
   cursor: pointer;
 }
 aside ul {
-  padding-top: 100px;
+  padding-top: 60px;
 }
 aside ul li {
   margin-bottom: 20px;
@@ -903,7 +903,7 @@ aside ul li a:hover {
 .container-depoimentos {
   background: #4e1f28;
   background-image: linear-gradient(90deg, #4e1f28 0%, #623740 100%);
-  height: 700px;
+  height: 550px;
   position: relative;
   z-index: 10;
   width: 100vw;
@@ -916,11 +916,41 @@ aside ul li a:hover {
   text-align: center;
   color: #fff;
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 2.5em;
+  font-size: 2em;
+}
+@media screen and (min-width: 470px) {
+  .container-depoimentos .title-depoimentos h2 {
+    font-size: 2.5em;
+  }
+}
+.container-depoimentos .container-swiper {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 40px;
+  align-items: start;
+}
+@media screen and (min-width: 630px) {
+  .container-depoimentos .container-swiper {
+    width: 630px;
+  }
 }
 .swiper {
-  width: 630px;
-  height: 500px;
+  width: 100%;
+  height: 400px;
+  transition: 1s;
+}
+@media screen and (min-width: 760px) {
+  .swiper {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 840px) {
+  .swiper {
+    width: 630px;
+  }
 }
 .swiper .swiper-wrapper {
   height: 100%;
@@ -929,54 +959,274 @@ aside ul li a:hover {
 .swiper .swiper-wrapper .swiper-slide {
   height: 100%;
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 .swiper .swiper-wrapper .swiper-slide .area-depoimentos {
   margin: 0 auto;
-  margin-top: 70px;
-  height: 100%;
+  height: 200px;
   width: 100%;
   text-align: center;
   color: #fff;
   font-family: 'Barlow Condensed', sans-serif;
+  position: relative;
+  padding: 0 60px;
+}
+@media screen and (min-width: 630px) {
+  .swiper .swiper-wrapper .swiper-slide .area-depoimentos {
+    padding: 0 0;
+  }
 }
 .swiper .swiper-wrapper .swiper-slide .area-depoimentos .paragraph-depoimentos {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   letter-spacing: 1px;
-  text-align: justify;
+  text-align: center;
+  height: 84px;
+  margin-bottom: 100px;
+  margin-top: -30px;
+}
+@media screen and (min-width: 564px) {
+  .swiper .swiper-wrapper .swiper-slide .area-depoimentos .paragraph-depoimentos {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 630px) {
+  .swiper .swiper-wrapper .swiper-slide .area-depoimentos .paragraph-depoimentos {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 840px) {
+  .swiper .swiper-wrapper .swiper-slide .area-depoimentos .paragraph-depoimentos {
+    font-size: 1.3rem;
+  }
 }
 .swiper .swiper-wrapper .swiper-slide .area-depoimentos .name-depoimentos {
-  margin-top: 40px;
+  margin-top: 60px;
+  position: relative;
   font-size: 1.5rem;
   font-family: 'Signika';
   font-weight: bolder;
+}
+.swiper .swiper-wrapper .swiper-slide .area-depoimentos .name-depoimentos img {
+  position: absolute;
+  top: -15px;
+  right: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 150px;
+  height: auto;
+}
+.swiper .swiper-wrapper .swiper-slide .area-depoimentos .name-depoimentos .time-depoimentos {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-align: center;
+  color: whitesmoke;
+  font-style: italic;
 }
 .swiper .swiper-wrapper .swiper-slide .area-depoimentos .stars-depoimentos img {
   height: 45px;
 }
 .swiper-button-next,
 .swiper-button-prev {
+  position: absolute;
   width: 50px;
   height: 50px;
-  background-color: #ccc;
-  color: #fff;
+  color: #fff !important;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  top: 240px;
+  display: none;
+}
+@media screen and (min-width: 760px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: inline;
+  }
+}
+.swiper-button-next {
+  right: -50px;
+}
+@media screen and (min-width: 840px) {
+  .swiper-button-next {
+    right: -80px;
+  }
+}
+.swiper-button-prev {
+  left: -50px;
+}
+@media screen and (min-width: 840px) {
+  .swiper-button-prev {
+    left: -80px;
+  }
+}
+.swiper-pagination-bullet {
+  background-color: #FFEABB;
+  width: 15px;
+  height: 15px;
+}
+.swiper-pagination-bullet-active {
+  background-color: #fff;
 }
 .container-maps {
   height: auto;
-  width: 100%;
+  width: 100vw;
   position: relative;
   background-color: #fff;
   z-index: 3;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+}
+@media screen and (min-width: 1140px) {
+  .container-maps {
+    padding: 20px;
+  }
+}
+.container-maps h2 {
+  font-size: 2.5rem;
+  font-family: 'Signika';
+  color: #4e1f28;
+}
+@media screen and (max-width: 1106px) {
+  .container-maps h2 {
+    text-align: center;
+    padding-right: 10px;
+    font-size: 2rem;
+  }
 }
 .container-maps .map {
-  width: 1140px;
+  width: 94%;
   padding: 20px 0;
 }
+@media screen and (min-width: 1140px) {
+  .container-maps .map {
+    width: 1140px;
+  }
+}
+footer {
+  height: auto;
+  width: 100vw;
+  z-index: 3;
+  position: relative;
+  background: #4e1f28;
+  background: linear-gradient(90deg, #4e1f28 0%, #623740 100%);
+  padding: 10px;
+  padding-top: 50px;
+}
+footer .container-footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 40px;
+  padding: 20px;
+}
+footer .container-footer .footer-items {
+  height: 380px;
+  width: 350px;
+  font-family: 'Signika';
+  color: #fff;
+}
+footer .container-footer .footer-items .footer-contact {
+  margin-bottom: 30px;
+}
+footer .container-footer .footer-items .paragraf-contact {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.6rem;
+}
+footer .container-footer .footer-items .num-contact {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+footer .container-footer .footer-items .footer-contact h2 {
+  font-size: 2rem;
+  font-family: 'Signika';
+  text-align: center;
+}
+footer .container-footer .footer-items .btn-contact {
+  text-align: center;
+  height: 60px;
+  font-size: 1.3rem;
+  background-color: #FFE8BA;
+  border: 2px #fff solid;
+  margin-left: 105px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+footer .container-footer .footer-items .btn-contact:hover {
+  color: #fff;
+  background-color: #f8c04f;
+  text-shadow: 1px 1px 5px black;
+}
+footer .container-footer .footer-endereco {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+footer .container-footer .btn-endereco {
+  text-align: center;
+  height: 60px;
+  font-size: 1.3rem;
+  background-color: #FFE8BA;
+  border: 2px #fff solid;
+  margin-left: 125px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+footer .container-footer .btn-endereco:hover {
+  color: #fff;
+  background-color: #f8c04f;
+  text-shadow: 1px 1px 5px black;
+}
+footer .container-footer .paragraf-endereco {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 1.3rem;
+}
+footer .container-footer .footer-horario {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+footer .container-footer .paragrafs-horario {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.3rem;
+}
+footer .container-footer .paragrafs-horario .ps-horario {
+  margin-top: 5px;
+}
+@media screen and (max-width: 1195px) {
+  footer .container-footer {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+/*grid-row: 1fr 1fr 1fr;
+align-items: center;
+justify-content: center;
+
+para deixar em colunas quando ficar responsivo
+
+
+display: grid;
+    grid-template-columns: 0.2fr 0.2fr 0fr;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 40px;
+    padding: 10px;
+
+para usar grid
+*/
 .whatsapp {
   width: 64px;
   height: 64px;

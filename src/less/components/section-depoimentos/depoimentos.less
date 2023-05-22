@@ -1,7 +1,7 @@
 .container-depoimentos {
     background: rgb(78,31,40);
     background-image: linear-gradient(90deg, rgba(78,31,40,1) 0%, rgba(98,55,64,1) 100%);
-    height: 700px;
+    height: 550px;
     position: relative;
     z-index: 10;
     width: 100vw;
@@ -14,7 +14,25 @@
             text-align: center;
             color: #fff;
             font-family: 'Barlow Condensed', sans-serif;
-            font-size: 2.5em;
+            font-size: 2em;
+
+            @media screen and (min-width: 470px) {
+                font-size: 2.5em;
+            }
+        }
+    }
+
+    .container-swiper{
+        width: 100%;
+        height: 700px;
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+        padding-top: 40px;
+        align-items: start;
+
+        @media screen and(min-width: 630px) {
+            width: 630px;
         }
     }
 }

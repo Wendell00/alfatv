@@ -1,0 +1,142 @@
+footer {
+    height: auto;
+    width: 100vw;
+    z-index: 3;
+    position: relative;
+    background: rgb(78,31,40);
+    background: linear-gradient(90deg, rgba(78,31,40,1) 0%, rgba(98,55,64,1) 100%);
+    padding: 10px;
+    padding-top: 50px;
+    
+
+    .container-footer {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 40px;
+        padding: 20px;
+
+        .footer-items {
+            height: 380px;
+            width: 350px;
+            // background-color: aqua;
+            font-family: 'Signika';
+            color: #fff;
+
+            .footer-contact {
+                margin-bottom: 30px;
+                
+            }
+        
+            .paragraf-contact {
+                text-align: center;
+                margin-top: 40px;
+                font-size: 1.6rem;
+            }
+    
+            .num-contact {
+                text-align: center;
+                margin-top: 20px;
+                font-size: 1.5rem;
+            }
+        
+            .footer-contact h2 {
+                font-size: 2rem;
+                font-family: 'Signika';
+                text-align: center;
+            }
+    
+            .btn-contact {
+                text-align: center;
+                height: 60px;
+                font-size: 1.3rem;
+                background-color: #FFE8BA;
+                border: 2px #fff solid;
+                margin-left: 105px;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+
+            .btn-contact:hover {
+                color: #fff;
+                background-color: #f8c04f;
+                text-shadow: 1px 1px 5px black;
+            }
+        }
+
+        .footer-endereco {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .btn-endereco {
+            text-align: center;
+            height: 60px;
+            font-size: 1.3rem;
+            background-color: #FFE8BA;
+            border: 2px #fff solid;
+            margin-left: 125px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .btn-endereco:hover {
+            color: #fff;
+            background-color: #f8c04f;
+            text-shadow: 1px 1px 5px black;
+        }
+
+        .paragraf-endereco {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 1.3rem;
+        }
+
+        .footer-horario {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .paragrafs-horario {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.3rem;
+
+            .ps-horario {
+                margin-top: 5px;
+            }
+        }
+
+    }
+
+    
+
+    @media screen and (max-width: 1195px) {
+        .container-footer {
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+}
+
+
+/*grid-row: 1fr 1fr 1fr;
+align-items: center;
+justify-content: center;
+
+para deixar em colunas quando ficar responsivo
+
+
+display: grid;
+    grid-template-columns: 0.2fr 0.2fr 0fr;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 40px;
+    padding: 10px;
+
+para usar grid
+*/

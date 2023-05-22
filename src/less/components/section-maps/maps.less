@@ -1,16 +1,39 @@
-
 .container-maps {
     height: auto;
-    width: 100%;
+    width: 100vw;
     position: relative;
     background-color: #fff;
     z-index: 3;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+
+    @media screen and (min-width: 1140px) {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        font-family: 'Signika';
+        color: rgb(78,31,40);
+
+        @media screen and (max-width: 1106px) {
+            text-align: center;
+            padding-right: 10px;
+            font-size: 2rem;
+        }
+        
+    }
 
     .map {
-        width: 1140px;
+        width: 94%;
         padding: 20px 0;
+
+        @media screen and (min-width: 1140px) {
+            width: 1140px;
+        }
     }
 
 }
