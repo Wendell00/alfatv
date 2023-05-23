@@ -409,7 +409,10 @@ main .buttons-main {
     margin-left: 0;
   }
 }
-main .buttons-main .btn-main {
+main .buttons-main a {
+  text-decoration: none;
+}
+main .buttons-main a .btn-main {
   padding: 0.8em 1.2em;
   border-bottom: 2px;
   border-style: solid;
@@ -435,23 +438,23 @@ main .buttons-main .btn-main {
   margin-left: 50px;
 }
 @media screen and (min-width: 450px) {
-  main .buttons-main .btn-main {
+  main .buttons-main a .btn-main {
     width: auto;
     margin-left: 0px;
   }
 }
 @media screen and (min-width: 768px) {
-  main .buttons-main .btn-main {
+  main .buttons-main a .btn-main {
     font-size: 16px;
     padding: 0.8em 1.8em;
   }
 }
-main .buttons-main .btn-main img {
+main .buttons-main a .btn-main img {
   width: 14px;
   height: 14px;
   margin-right: 10px;
 }
-main .buttons-main .btn-main:before {
+main .buttons-main a .btn-main:before {
   content: '';
   width: 0;
   height: 300%;
@@ -464,13 +467,13 @@ main .buttons-main .btn-main:before {
   display: block;
   z-index: -1;
 }
-main .buttons-main .btn-main:before:hover {
+main .buttons-main a .btn-main:before:hover {
   background: rgba(238, 76, 105, 0.9);
 }
-main .buttons-main .btn-main:hover:before {
+main .buttons-main a .btn-main:hover:before {
   width: 105%;
 }
-main .buttons-main .btn-main:hover {
+main .buttons-main a .btn-main:hover {
   color: #ee4c69;
 }
 main .arrow {
@@ -713,7 +716,10 @@ aside ul li a:hover {
     font-size: 2.5em;
   }
 }
-.consertos-container .titulo-container .btn-consertos {
+.consertos-container .titulo-container a {
+  text-decoration: none;
+}
+.consertos-container .titulo-container a .btn-consertos {
   padding: 1.2em 1.8em;
   border: 2px;
   border-style: solid;
@@ -739,29 +745,29 @@ aside ul li a:hover {
   margin-top: 20px;
 }
 @media screen and (min-width: 580px) {
-  .consertos-container .titulo-container .btn-consertos {
+  .consertos-container .titulo-container a .btn-consertos {
     font-size: 12px;
     padding: 0.8em 1.8em;
     margin-top: 0px;
   }
 }
 @media screen and (min-width: 768px) {
-  .consertos-container .titulo-container .btn-consertos {
+  .consertos-container .titulo-container a .btn-consertos {
     font-size: 16px;
     margin-right: 40px;
   }
 }
 @media screen and (min-width: 840px) {
-  .consertos-container .titulo-container .btn-consertos {
+  .consertos-container .titulo-container a .btn-consertos {
     margin-right: 4px;
   }
 }
-.consertos-container .titulo-container .btn-consertos img {
+.consertos-container .titulo-container a .btn-consertos img {
   width: 14px;
   height: 14px;
   margin-right: 10px;
 }
-.consertos-container .titulo-container .btn-consertos:hover {
+.consertos-container .titulo-container a .btn-consertos:hover {
   color: #ee4c69;
 }
 .consertos-container .consertos-content {
@@ -1111,24 +1117,43 @@ aside ul li a:hover {
   }
 }
 footer {
-  height: 260px;
+  height: 700px;
   width: 100vw;
   z-index: 3;
   position: relative;
   background: #4e1f28;
   background: linear-gradient(90deg, #4e1f28 0%, #623740 100%);
-  padding: 10px;
-  padding-top: 50px;
+  padding: 0px;
+  padding-top: 30px;
   display: grid;
   justify-content: center;
+}
+@media screen and (min-width: 1070px) {
+  footer {
+    height: 268px;
+  }
 }
 footer .footer-container {
   display: grid;
   justify-content: center;
   grid-template-rows: auto auto;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 1140px;
+  grid-template-columns: 1fr;
+  width: 100vw;
   height: 100%;
+  padding-right: 0;
+}
+@media screen and (min-width: 1070px) {
+  footer .footer-container {
+    padding-right: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1140px) {
+  footer .footer-container {
+    width: 1140px;
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 footer .footer-container .footer-contato {
   width: 300px;
@@ -1138,6 +1163,9 @@ footer .footer-container .footer-contato .btn-container {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+footer .footer-container .footer-contato .btn-container a {
+  margin-bottom: 10px;
 }
 footer .footer-container .footer-contato .btn-container a .btn-contato {
   padding: 1.2em 1.8em;
@@ -1160,12 +1188,43 @@ footer .footer-container .footer-contato .btn-container a .btn-contato:hover {
   background-color: #FFEABB;
   color: #4e1f28;
 }
+footer .footer-container .copright {
+  grid-column: span 1;
+  width: 100%;
+}
+@media screen and (min-width: 1070px) {
+  footer .footer-container .copright {
+    grid-column: span 3;
+  }
+}
+footer .footer-container .copright h4 {
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #FFEABB;
+  text-align: center;
+}
+@media screen and (min-width: 450px) {
+  footer .footer-container .copright h4 {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 570px) {
+  footer .footer-container .copright h4 {
+    font-size: 1.1rem;
+  }
+}
 .h3-footer {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-family: 'Signika';
   text-align: center;
   color: white;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 570px) {
+  .h3-footer {
+    font-size: 2rem;
+  }
 }
 .btn-container {
   width: 100%;
@@ -1208,6 +1267,24 @@ footer .footer-container .footer-contato .btn-container a .btn-contato:hover {
 }
 .paragrafs-horario .ps-horario {
   text-align: justify;
+}
+table {
+  width: 60%;
+  border-collapse: collapse;
+}
+table th,
+table td {
+  padding-left: 8px;
+  text-align: left;
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+@media screen and (min-width: 570px) {
+  table th,
+  table td {
+    font-size: 1rem;
+  }
 }
 .whatsapp {
   width: 64px;
