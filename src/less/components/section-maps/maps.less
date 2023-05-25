@@ -4,10 +4,6 @@
     position: relative;
     background-color: #fff;
     z-index: 3;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
     padding: 0px;
     padding-top: 20px;
 
@@ -15,26 +11,36 @@
         padding: 20px;
     }
 
-    h2 {
-        font-size: 2.5rem;
-        font-family: 'Signika';
-        color: rgb(78,31,40);
-
-        @media screen and (max-width: 1106px) {
-            text-align: center;
-            padding-right: 10px;
-            font-size: 2rem;
-        }
+    .subContainer-maps{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         
-    }
-
-    .map {
-        width: 94%;
-        padding: 20px 0;
-
-        @media screen and (min-width: 1140px) {
-            width: 1140px;
+        h2 {
+            font-size: 2.5rem;
+            font-family: 'Signika';
+            color: rgb(78,31,40);
+    
+            @media screen and (max-width: 1106px) {
+                text-align: center;
+                padding-right: 10px;
+                font-size: 2rem;
+            }
+            
+        }
+    
+        .map {
+            width: 94%;
+            padding: 20px 0;
+    
+            @media screen and (min-width: 1140px) {
+                width: 1140px;
+            }
         }
     }
+
 
 }

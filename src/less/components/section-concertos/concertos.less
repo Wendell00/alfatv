@@ -174,11 +174,12 @@
                     background-color: whitesmoke;
                     border-bottom: 3px solid #6d1928;
                     margin-bottom: 50px;
-                    transform: translateY(-5px);
+                    margin-top: -5px;
+                    position: relative;
 
                     @media screen and (min-width: 480px) {
                         width: 450px;
-                        transform: translateY(0px);
+                        margin-top: 0px;
                     }
 
                     @media screen and (min-width: 768px) {
@@ -202,11 +203,12 @@
 
                     .risk{
                         position: absolute;
-                        width: 100%;
+                        width: 20%;
                         bottom: 55px;
                         height: 3px;
+                        right: 0;
+                        z-index: 99;
                         background-color: #6d1928;
-                        clip-path: inset(0 0 0 86%);
                     }
 
                    .header-card{

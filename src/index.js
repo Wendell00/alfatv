@@ -1,4 +1,3 @@
- 
 const swiper = new Swiper('.swiper', {
     autoplay: {
       delay: 3500,
@@ -18,7 +17,6 @@ const swiper = new Swiper('.swiper', {
   
   });
 
-
 aside = document.querySelector('.aside-nav')
 menuIcon = document.querySelector('.menuIcon')
 closeIcon = document.querySelector('.closeIcon')
@@ -30,3 +28,5 @@ menuIcon.addEventListener('click', () => {
 closeIcon.addEventListener('click', () => {
     aside.classList.toggle('dis-inline');
 });
+
+

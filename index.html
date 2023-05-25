@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/7.1.0/esm/ionicons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
     <title>Alfa TV - Conserto</title>
@@ -18,10 +19,10 @@
     <nav>
         <img src="./public/menuIcon.png" class="menuIcon" alt="Menu">
         <ul>
-            <li class="active-li"><a href="#" class="active-a">Home</a></li>
-            <li><a href="#" class="">Consertos</a></li>
-            <li><a href="#" class="">Depoimentos</a></li>
-            <li><a href="#" class="">Contatos</a></li>
+            <li><a href="#home" class="nav-list active-a">Home</a></li>
+            <li><a href="#titulo-concertos" class="nav-list">Consertos</a></li>
+            <li><a href="#titulo-depoimentos" class="nav-list">Depoimentos</a></li>
+            <li><a href="#maps" class="nav-list">Contatos</a></li>
         </ul>
         <h3>(11) 94612-0040</h3>
     </nav>
@@ -29,13 +30,13 @@
         <img src="./public/close.png" class="closeIcon" alt="">
         <ul>
             <li class="active-li"><a href="#" class="active-a">Home</a></li>
-            <li><a href="#" class="">Consertos</a></li>
-            <li><a href="#" class="">Depoimentos</a></li>
-            <li><a href="#" class="">Contatos</a></li>
+            <li><a href="#titulo-concertos" class="">Consertos</a></li>
+            <li><a href="#titulo-depoimentos" class="">Depoimentos</a></li>
+            <li><a href="#maps" class="">Contatos</a></li>
         </ul>
     </aside>
     <main>
-        <div class="main-text">
+        <div class="main-text" id="alfatv" data-anime="top">
             <h1>ALFA <div class="span-h1"><h1>TV</h1></div></h1>
             <img src="./public/antena.png" class="antena">
             <h2>CONSERTOS E REPAROS</h2>
@@ -58,11 +59,11 @@
             <img src="./public/arrow-down.png" alt="" class="arrow-down">
         </div>
     </main>
-    <div class="height-100vh"></div>
+    <div class="height-100vh" id="home"></div>
     <section class="consertos-container">
         <div class="yellow-cut"></div>
         <div class="titulo-container">
-            <h2 class="titulo-container2" >Principais consertos da TV</h2>
+            <h2 class="titulo-container2" data-anime="left" id="titulo-concertos">Principais consertos da TV</h2>
             <a href="https://api.whatsapp.com/send?l=pt&phone=55011946120040" target="_blank">
                 <div class="btn-consertos"> 
                     <img src="./public/calendarConsertos.png" alt="">
@@ -72,7 +73,7 @@
         </div>
         <div class="consertos-content">
             <div class="mx-wid">
-                <div class="card">
+                <div class="card" id="card-1" data-anime="left">
                     <div class="header-card">
                         <img src="./public/black-screen.png" alt="">
                     </div>
@@ -87,7 +88,7 @@
                     <div class="risk"></div>
                 </div>
 
-                <div class="card">
+                <div class="card" id="card-2" data-anime="left">
                     <div class="header-card">
                             <img src="./public/volume-mute.png" class='mute' alt="">
                     </div>
@@ -102,7 +103,7 @@
                     <div class="risk"></div>
                 </div>
 
-                <div class="card">
+                <div class="card" id="card-3" data-anime="left">
                     <div class="header-card">
                         <img src="./public/thunder.png" alt="">
                     </div>
@@ -117,7 +118,7 @@
                     <div class="risk"></div>
                 </div>
 
-                <div class="card">
+                <div class="card" id="card-4" data-anime="left">
                     <div class="header-card">
                         <img src="./public/no-image.png" alt="">
                     </div>
@@ -134,8 +135,8 @@
             </div>
         </div>
     </section>
-    <section class="container-depoimentos">
-        <div class="title-depoimentos">
+    <section class="container-depoimentos" id="waypoint">
+        <div class="title-depoimentos" data-anime="left" id="titulo-depoimentos">
             <h2>Clientes da assistência técnica</h2>
         </div>
         <div class="container-swiper">
@@ -204,8 +205,10 @@
     </section>
     <div class="row-color"></div>
     <section class="container-maps">
-        <h2 class="h2-maps">Onde nos encontrar !</h2>
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.2713855997877!2d-46.602370659417616!3d-23.486732558944336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef60f19e6eaa9%3A0xc4b78dd6224d89cb!2sR.%20Padre%20Agostinho%20de%20Matos%2C%20454%20-%20Parada%20Inglesa%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002247-140!5e0!3m2!1spt-BR!2sbr!4v1684690119452!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="subContainer-maps" id="maps" data-anime="left">
+            <h2 class="h2-maps">Onde nos encontrar !</h2>
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.2713855997877!2d-46.602370659417616!3d-23.486732558944336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef60f19e6eaa9%3A0xc4b78dd6224d89cb!2sR.%20Padre%20Agostinho%20de%20Matos%2C%20454%20-%20Parada%20Inglesa%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002247-140!5e0!3m2!1spt-BR!2sbr!4v1684690119452!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </section>
     <footer>
         <div class="footer-container">
@@ -267,38 +270,9 @@
                 <h4>Copyright © 2023. Todos os direitos reservados AlfaTV.</h4>
             </div>
         </div>
-
-        <!-- <div class="container-footer">
-            <div class="footer-items">
-                <div class="footer-contact"><h3>Contato</h3></div>
-                <a href="https://web.whatsapp.com/send?phone=5511946120040&text=Olá gostaria de agendar um horário para o conserto de minha televisão." target="_blank"><button class="btn-contact">Fale conosco</button></a>
-                <div class="paragraf-contact"><p class="p-contact">Agende, também, por aqui um horário.</p></div>
-                <div class="num-contact"><p class="p-contact">(11) 94612-0040</p></div>
-            </div>
-            <div class="footer-items">
-                <div class="footer-endereco"><h3>Endereço</h3></div>
-                <a href="https://www.google.com/maps/dir//Alfa+conserto+tv+retira+e+orçamento+gratuito/@-23.4867219,-46.6698415,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94cef7001a4427a3:0x3a95d77cfc6584a3!2m2!1d-46.5998011!2d-23.4867375" target="_blank"><button class="btn-endereco">Ver rotas</button></a>
-                <div class="paragraf-endereco">
-                    <p class="p-contact">Rua Padre Agostinho de Matos, 454</p>
-                    <p class="p-contact">Parada Inglesa 02247-140</p>
-                    <p class="p-contact">São Paulo - SP Brasil</p>
-                </div>
-            </div>
-            <div class="footer-items">
-                <div class="footer-horario"><h3>Horários de funcionamento</h3></div>
-                <div class="paragrafs-horario">
-                    <p class="ps-horario p-contact">segunda:	08:00 - 18:00</p>
-                    <p class="ps-horario p-contact">terça:	08:00 - 18:00</p>
-                    <p class="ps-horario p-contact">quarta:	08:00 - 18:00</p>
-                    <p class="ps-horario p-contact">quinta:	08:00 - 18:00</p>
-                    <p class="ps-horario p-contact">sexta:	08:00 - 18:00</p>
-                    <p class="ps-horario p-contact">sábabado:	09:00 - 16:00</p>
-                    <p class="ps-horario p-contact">domingo:	Fechado</p>
-                </div>
-            </div>
-        </div> -->
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="src/waypoint.js"></script>
     <script src="src/index.js"></script>
 </body>
 </html>
