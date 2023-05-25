@@ -117,3 +117,5 @@ var navMaps = new Waypoint({
     },
     offset: '10%'
 })
+
+window.addEventListener()
