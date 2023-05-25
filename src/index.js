@@ -8,6 +8,7 @@ const swiper = new Swiper('.swiper', {
 
     pagination: {
       el: '.swiper-pagination',
+      clickable: true,
     },
   
     navigation: {
@@ -29,4 +30,12 @@ closeIcon.addEventListener('click', () => {
     aside.classList.toggle('dis-inline');
 });
 
+
+var dataAtual = new Date();
+
+// Obtém o ano atual
+var anoAtual = dataAtual.getFullYear();
+
+var elementDate = document.querySelector('.year-date');
+elementDate.innerText = anoAtual;
 
