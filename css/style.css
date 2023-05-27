@@ -633,7 +633,7 @@ aside ul li a:hover {
   justify-content: space-between;
   box-sizing: border-box;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
 }
 @media screen and (min-width: 600px) {
   .consertos-container .titulo-container {
@@ -676,6 +676,10 @@ aside ul li a:hover {
   .consertos-container .titulo-container h2 {
     font-size: 2.5em;
   }
+}
+.consertos-container .titulo-container h2 .tela-quebrada {
+  font-size: 1.6rem;
+  color: #F05C71;
 }
 .consertos-container .titulo-container a {
   text-decoration: none;

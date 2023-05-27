@@ -53,7 +53,7 @@ var card2 = new Waypoint({
       let elemento = this.element
       setTimeout(function() {
         elemento.classList.add('animate')
-      }, 200);
+      }, 300);
     },
     offset: '75%'
   })
@@ -64,7 +64,7 @@ var card3 = new Waypoint({
       let elemento = this.element
       setTimeout(function() {
         elemento.classList.add('animate')
-      }, 400);
+      }, 600);
     },
     offset: '75%'
   })
@@ -75,7 +75,7 @@ var card4 = new Waypoint({
       let elemento = this.element
       setTimeout(function() {
         elemento.classList.add('animate')
-      }, 600);
+      }, 900);
     },
     offset: '75%'
   })
