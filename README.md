@@ -1,2 +1,2 @@
 # AlfaTV Concertos
- Freelance para uma assistência técnica de televisões.
+ Freelance para uma assistência técnica de televisões
