@@ -7,7 +7,7 @@ A AlfaTV é um Freelance feito usando HTML/CSS/JS, para uma assistência técnic
 
 ## Como rodar o projeto
 
-https://alfatvconsertos.com/
+[https://alfatvconsertos.com/](https://wendell00.github.io/alfatv/)
 
 1. Faça download do projeto
 2. Abra o index.html que se encontra na raíz do projeto.
